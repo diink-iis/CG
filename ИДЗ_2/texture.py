@@ -1,6 +1,5 @@
 import pygame as pg
 import moderngl as mgl
-import glm
 
 
 class Texture:
@@ -23,7 +22,6 @@ class Texture:
 
     def get_texture_cube(self, dir_path, ext='png'):
         faces = ['right', 'left', 'top', 'bottom'] + ['front', 'back'][::-1]
-        # textures = [pg.image.load(dir_path + f'{face}.{ext}').convert() for face in faces]
         textures = []
         for face in faces:
             texture = pg.image.load(dir_path + f'{face}.{ext}').convert()
